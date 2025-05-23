@@ -15,7 +15,7 @@ COPY ./ ./
 ENV CC=clang CXX=clang++
 RUN cargo build --release --bin graph-gateway --color=always
 
-FROM debian:bookworm-slim
+FROM debian:12.11-slim
 RUN apt-get update && apt-get install -y \
   ca-certificates \
   libsasl2-dev \
